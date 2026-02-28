@@ -29,7 +29,7 @@ CREATE TABLE Etudiant (
 
 ---
 
-## 5️⃣ Insertion de données tests
+##  Insertion de données tests
 
 <p align="center"> <img src="images/a2.png" width="800"> </p>
 
