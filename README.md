@@ -1,10 +1,6 @@
 #  Lab 8 — Web Service PHP & Application Android (Volley + Gson)
 
----
-
-
-
-# Architecture complète : **MySQL + PHP (MVC) + Android (Volley + Gson)**
+### Architecture complète : **MySQL + PHP (MVC) + Android (Volley + Gson)**
 
 ---
 
@@ -30,16 +26,14 @@ CREATE TABLE Etudiant (
 );
 ```
 <p align="center"> <img src="images/a1.png" width="800"> </p>
-<p align="center"> <img src="images/a2.png" width="600"> </p>
-
 
 ---
 
 ## 5️⃣ Insertion de données tests
 
-<p align="center"> <img src="images/a2.png" width="600"> </p>
+<p align="center"> <img src="images/a2.png" width="800"> </p>
 
-✔ La base est prête pour le Web Service.
+-La base est prête pour le Web Service.
 
 ---
 
@@ -47,8 +41,7 @@ CREATE TABLE Etudiant (
 
 ## Structure du projet (VS Code)
 
-<p align="center"> <img src="images/a16.png" width="600"> </p>
----
+<p align="center"> <img src="images/a16.png" width="400"> </p>
 
 ## Architecture utilisée (MVC simplifiée)
 
@@ -71,9 +64,9 @@ CREATE TABLE Etudiant (
 
 ---
 
-## 🧪 Tests avec Postman
+##  Tests avec Postman
 
-### ➕ Ajouter un étudiant
+###  Ajouter un étudiant
 
 POST  
 ```
@@ -88,21 +81,17 @@ prenom = Ayoub
 ville = Marrakech
 sexe = homme
 ```
-<p align="center"> <img src="images/a4.png" width="600"> </p>
-Réponse JSON :
+<p align="center"> <img src="images/a4.png" width="800"> </p>
 
-<p align="center"> <img src="images/a5.png" width="600"> </p>
-<p align="center"> <img src="images/a6.png" width="600"> </p>
----
 
-### 📋 Charger la liste
+###  Charger la liste
 
 GET :
 
 ```
 http://localhost/projet/ws/loadEtudiant.php
 ```
-
+<p align="center"> <img src="images/a5.png" width="800"> </p>
 Retour :
 
 ```json
@@ -114,77 +103,73 @@ Retour :
     "ville": "Marrakech",
     "sexe": "femme"
   }
+......
 ]
 ```
 
-✔ Les tests Postman confirment le bon fonctionnement du backend.
+ Les tests Postman confirment le bon fonctionnement du backend.
 
 ---
 
-# 🟢 Partie 3 — Application Android (Java + Volley + Gson)
+#  Partie 3 — Application Android (Java + Volley + Gson)
 
-## 📦 Technologies utilisées
-
-- Java
-- Volley (Requêtes HTTP)
-- Gson (Parsing JSON)
-- RecyclerView
-- AlertDialog
-- Architecture simple multi-activité
-
+## Test et vérification:
+<p align="center"> <img src="images/a8.png" width="400"> </p>
+<p align="center"> <img src="images/a9.png" width="1000"> </p>
 ---
 
-## 📱 Fonctionnalités implémentées
+##  Fonctionnalités implémentées
 
-### ➕ 1. Ajouter un étudiant
+###  1. Ajouter un étudiant
 
 - Formulaire (Nom, Prénom, Ville, Sexe)
-- Envoi POST via Volley
-- Parsing JSON avec Gson
-- Redirection vers la liste
-
+<p align="center"> <img src="images/a6.png" width="600"> </p>
 ---
 
-### 📋 2. Affichage de la liste
+###  2. Affichage de la liste
 
 - RecyclerView
 - Adapter personnalisé
 - Chargement via GET
 - Actualisation dynamique
+<p align="center"> <img src="images/a10.png" width="400"> </p>
 
 ---
+###  3. Suppression
 
-### ✏️ 3. Modification
+- Popup confirmation
+- Suppression via POST
+- Mise à jour immédiate
+- Toast de confirmation
+<p align="center"> <img src="images/a11.png" width="400"> </p>
+<p align="center"> <img src="images/a12.png" width="400"> </p>
+<p align="center"> <img src="images/a13.png" width="400"> </p>
+---
+###  3. Modification
 
 - Clic sur un étudiant
 - Popup avec options
 - Formulaire de modification
 - Mise à jour via POST
 - Refresh automatique
+<p align="center"> <img src="images/a14.png" width="400"> </p>
+<p align="center"> <img src="images/a15.png" width="400"> </p>
+---
 
 ---
 
-### 🗑️ 4. Suppression
+#  Challenge final réalisé
 
-- Popup confirmation
-- Suppression via POST
-- Mise à jour immédiate
-- Toast de confirmation
-
----
-
-# 🎯 Challenge final réalisé
-
-✔ Activité affichant la liste complète  
-✔ Popup Modifier / Supprimer  
-✔ Confirmation avant suppression  
-✔ Actualisation dynamique  
-✔ Bouton retour vers AddEtudiant  
-✔ Gestion propre des réponses JSON  
+1.  Activité affichant la liste complète  
+2.  Popup Modifier / Supprimer  
+3.  Confirmation avant suppression  
+4.  Actualisation dynamique  
+5.  Bouton retour vers AddEtudiant  
+6.  Gestion propre des réponses JSON  
 
 ---
 
-# 🔄 Fonctionnement global
+#  Fonctionnement global
 
 ```
 Android App
@@ -194,35 +179,7 @@ Web Service PHP
 Base MySQL
 ```
 
-Communication REST en JSON.
-
 ---
 
-# 🧠 Analyse Technique
 
-- Architecture MVC côté PHP
-- Utilisation de PDO (sécurité + requêtes préparées)
-- Communication REST
-- Parsing JSON typé avec Gson
-- RecyclerView dynamique
-- Bonne gestion UX (AlertDialog + Toast)
-- Synchronisation en temps réel
 
----
-
-# 🚀 Résultat final
-
-Application Android entièrement fonctionnelle avec :
-
-- CRUD complet
-- Synchronisation base de données
-- Architecture propre
-- Tests backend validés via Postman
-
----
-
-# 👩‍💻 Auteur
-
-**Hajar Chaira**  
-EMSI — Développement Mobile  
-Lab 8 — Web Service & Android
